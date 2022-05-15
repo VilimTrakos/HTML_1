@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <title>Obrazac za dodavanje novog sadržaja</title>
+    <meta charset='utf-8'>
+    <meta name="author" content="Vilim Trakoštanec">
+    <meta name="description" content=" html, head, title">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <header>
+        <a id="Zaglavlje"></a>
+        <noscript>
+            
+                <dialog>open> Vaš preglednik ne podržava javascript</dialog>
+            
+        </noscript>
+
+
+        <a href="/index.html">
+            <img src="/materijali/logo_kopija.png" alt="Logo">
+        </a>
+        <h1>Obrazac</h1>
+        <a href="https://support.google.com/accounts/answer/7338427?hl=hr&co=GENIE.Platform%3DDesktop">Prijava</a>
+    </header>
+
+    <nav>
+        <a href="/index.html">Početna</a>
+        <a href="/obrazac.html">Obrazac</a>
+        <a href="/ostalo/kreativna.html">Kreativna</a>
+        <a href="/ostalo/multimedija.html">Multimedija</a>
+        <a href="/ostalo/o_autoru.html">O autoru</a>
+        <a href="/podaci/popis.html">Popis</a>
+
+    </nav>
+
+<main>
+
+    
+    <form method="POST" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php">
+        <fieldset>
+            <legend>O mačkama</legend>
+
+            <label for="Nemam">Imate li maček?</label><br>
+            <input type="radio" name="Odabir_macaka" id="Nemam" value="Nemam"
+                required checked>Nemam <br>
+            <input type="radio" name="Odabir_macaka" id="Imam_jednu"
+                value="Imam jednu">Imam jednu <br>
+            <input type="radio" name="Odabir_macaka" id="Imam_dvije"
+                value="Imam dvije">Imam dvije <br>
+            <input type="radio" name="Odabir_macaka" id="Imam_tri_ili_vise"
+                value="Imam tri ili više">Imam tri ili više <br>
+
+            <label for="velikiTekst">Zašto volite mačke?</label><br>
+            <textarea name="Nešto vaše" id="velikiTekst" cols="40" rows="10" maxlength="1000"></textarea><br>
+
+            <label for="broj">Koliko sretni kad vidite mačku?[1-100]</label><br>
+            <input type="number" id="broj" min="0" max="100" value="1" required name="Srtan_sto_vidi_macku"> <br>
+
+            <label for="padajuci">Odaberite od ponuđenog</label><br>
+            <select name="Padajuci[]" id="padajuci" multiple size="10">
+                <optgroup label="Najdraža vrta mačke">
+                    <option value="Meine-Coon">Meine-Coon</option>
+                    <option value="Bengalska Mačka">Bengalska Mačka</option>
+                    <option value="Caracle mačka">Caracle mačka</option>
+                    <option value="Himalajska mačka">Himalajska mačka</option>
+                    <option value="Munchkin mačka">Munchkin mačka</option>
+                </optgroup>
+                <optgroup label="Najdraža velika mačka">
+                    <option value="Lav">Lav</option>
+                    <option value="Tigar">Tigar</option>
+                    <option value="Leopard">Leopard</option>
+                    <option value="Pantera">Pantera</option>
+                    <option value="Jaguar">Jaguar</option>
+                </optgroup>
+            </select><br>
+            <i><small>Za odabir više ponuđenih mogućnosti držite CTRL i kliknite na željenu mogućnost</small></i>
+<br>
+            <label for="Datum">Kada ste zadnje dirali macku?</label>
+            <input type="datetime-local" name="Datumi" id="Datum" min="2000-01-01T00:00" max="2022-04-01T12:00" >
+            <br>
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Nešto o vama</legend>
+
+
+            <label for="Ime_prez">Upišite svoje ime i prezime:</label><br>
+            <input type="text" id="Ime_prez" name="Ime_i_prezime" required>*<br> 
+
+            <Label for="godina_rodenja">Godina rođenja:</Label>
+            1940<input type="range" id="godina_rodenja" min="1940" max="2002" step="1" class="slider" name="Godina rođenja">2002<br>
+
+            
+            <input type="checkbox" name="naj_1" id ="Nogomet" value="Nogomet"> <label for="Nogomet">Nogomet</label>
+            <input type="checkbox" name="naj_2" id="Rukomet" value="Rukomet"> <label for="Rukomet">Rukomet</label>
+            <input type="checkbox" name="naj_3" id="Košarka" value="Košarka"> <label for="Košarka">Košarka</label>
+            <input type="checkbox" name="naj_4" id="Vaterpolo" value="Vaterpolo"> <label for="Vaterpolo">Vaterpolo</label>
+            <input type="checkbox" name="naj_5" id="Tenis" value="Tenis"> Tenis <label for="Tenis">Tenis</label>
+            <br>
+
+            <label for="gledanje">Kako gledate najdraže sportove:</label>
+            <input list="gledanja" id="gledanje" name="Nacin gledanja">
+            <datalist id="gledanja" >
+                <option value="TV">Televizija</option>
+                <option value="Online">Online prijenos</option>
+                <option value="Uzivo">Uživo</option>
+
+            </datalist>
+            <label for="lopta"></label>
+            <button type="button" onclick="alert ('Ne radim ništa!')" id="lopta"></button>
+<br>
+            <label for="utakmica">Iduca utakmica:</label>
+            <input type="date" name="Iduca utakmica je" id="utakmica" min="2022-04-01" max="2022-12-31">
+
+        </fieldset>
+
+
+
+
+        
+
+        <input type="submit" value="Pošalji">
+        <button type="reset">Obrisi podatke</button>
+
+    </form>
+
+
+</main>
+
+
+
+    <footer>
+
+        <a href="https://www.srce.unizg.hr/files/srce/docs/otvoreni-pristup/creative_commons_licence.pdf">
+            <img src="/materijali/CC_imovanje.png" alt="CC_imovanje" width="200" height="75">
+        </a>
+        <br>
+        <p>
+            &copy;
+            2022.
+            <a href="https://gmail.com">Vilim Trakoštanec</a>
+        </p>
+        <a href="http://validator.w3.org/check?uri=%7Buri%7D"><img src="materijali/validator_slika.png"
+                alt="Validator"></a>
+        <br>
+        <a href="#Zaglavlje">&#8593;</a>
+    </footer>
+
+</body>
+
+</html>
